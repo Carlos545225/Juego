@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrapa los Círculos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Atrapa los Círculos <img src="img/favicon.ico" alt="Icono de ejemplo" class="icono"></h1>
+    <div id="instructions">
+        <p><strong>Instrucciones:</strong></p>
+        <ul>
+            <li>Haz clic en los círculos rojos para ganar 1 punto.</li>
+            <li>Haz clic en los triángulos verdes para ganar 2 puntos.</li>
+            <li>Haz clic en los cuadrados azules para ganar 3 puntos.</li>
+            <li>Los triángulos aparecerán cada 10 segundos y los cuadrados cada 15 segundos.</li>
+            <li>Introduce tu propio tiempo de juego y presiona "Iniciar" para comenzar.</li>
+        </ul>
+    </div>
+    <div id="controls">
+        <label for="game-time">Tiempo de juego (segundos): </label>
+        <input type="number" id="game-time" value="60" min="10">
+        <button id="start-button">Iniciar</button>
+        <button id="reset-button">Reiniciar</button>
+    </div>
+    <div id="game-container">
+        <div id="score-board">
+            <span>Puntuación: </span><span id="score">0</span>
+        </div>
+        <div id="timer-board">
+            <span>Tiempo: </span><span id="timer">60</span>
+        </div>
+    </div>
+        <footer>
+            <p>&copy; Carlos Eduardo Correa Baloco 2024</p>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

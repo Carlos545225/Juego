@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lilita+One&display=swap');
+body {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+.icono{
+    width: 28px;
+    height: 28px;
+}
+#instructions {
+    margin-bottom: 20px;
+    text-align: left;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+#controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#controls label {
+    margin-right: 10px;
+}
+
+#controls button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#controls button:hover {
+    background-color: #0056b3;
+}
+
+#game-container {
+    position: relative;
+    width: 90%; /* Cambiado a porcentaje */
+    max-width: 600px; /* Máximo ancho para evitar que crezca demasiado en pantallas grandes */
+    height: 50vh; /* 50% de la altura del viewport */
+    background-color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+#score-board, #timer-board {
+    font-size: 18px;
+    background: rgba(255,255,255,0.8);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#score-board {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#timer-board {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.circle, .triangle, .square {
+    position: absolute;
+    cursor: pointer;
+    animation: appear 2s infinite;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 10%; /* Cambiado a porcentaje */
+    height: 10%; /* Cambiado a porcentaje */
+    max-width: 50px; /* Máximo tamaño */
+    max-height: 50px; /* Máximo tamaño */
+    background-color: red;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 5vw solid transparent; /* Usando vw para responsive */
+    border-right: 5vw solid transparent; /* Usando vw para responsive */
+    border-bottom: 10vh solid green; /* Usando vh para responsive */
+}
+
+.square {
+    width: 10%; /* Cambiado a porcentaje */
+    height: 10%; /* Cambiado a porcentaje */
+    max-width: 50px; /* Máximo tamaño */
+    max-height: 50px; /* Máximo tamaño */
+    background-color: blue;
+}
+
+@keyframes appear {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+/* Media query para ajustar el tamaño de fuente en pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    #score-board, #timer-board {
+        font-size: 14px;
+    }
+}
+
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    #controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #controls button {
+        width: 100%;
+    }
+}
